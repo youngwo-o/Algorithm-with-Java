@@ -52,10 +52,11 @@ public class BOJ_9205 {
             }
         }
 
+        //모든 정점 간에 이동이 가능한지 판단
         for(int k = 0; k < n + 2; ++k) {
             for(int i = 0; i < n  + 2; ++i) {
                 for(int j = 0; j < n + 2; ++j) {
-                    if(adj[i][j] > adj[i][k] + adj[k][j])
+                    if(adj[i][j] > adj[i][k] + adj[k][j]) //이동 가능한 경우
                         adj[i][j] = adj[i][k] + adj[k][j];
                 }
             }
@@ -65,6 +66,7 @@ public class BOJ_9205 {
         else return false;
     }
 
+    //모든 정점과 모든 정점 사이에 50ml 맥주 20개 (1000ml) 로 이동 가능한지 판단
     private static boolean isAvailable(int i, int j) {
         int xDiff = Math.abs(m.get(i).x - m.get(j).x);
         int yDiff = Math.abs(m.get(i).y - m.get(j).y);
