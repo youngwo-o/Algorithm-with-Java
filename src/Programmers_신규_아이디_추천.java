@@ -2,8 +2,8 @@ import java.util.Locale;
 
 public class Programmers_신규_아이디_추천 {
 
-    static class Solution {
-        public static String solution(String new_id) {
+    class Solution {
+        public String solution(String new_id) {
             String id = new_id.toLowerCase();
             id = id.replaceAll("[^a-z0-9-_.]", "");
             id = id.replaceAll("[.]{2,}", ".");
@@ -20,8 +20,4 @@ public class Programmers_신규_아이디_추천 {
         }
     }
 
-    public static void main(String[] args) {
-        String ans = Solution.solution("...!@BaT#*..y.abcdefghijklm");
-        System.out.println(ans);
-    }
 }
